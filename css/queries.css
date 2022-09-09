@@ -1,0 +1,352 @@
+/* Don't use pixels in media queries.
+Media queries don't respond in html font-size settings,
+but it responds in default font-size in browser. */
+
+/************************** 
+1350px / 16px = 84
+BELOW 1344PX (Smaller desktops)
+***************************/
+
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+
+  .header {
+    padding: 0 4.8rem 0 3.2rem;
+  }
+}
+
+/************************** 
+1200px / 16px = 75
+BELOW 1200PX (Landscape Tablets)
+***************************/
+
+@media (max-width: 75em) {
+  /* 9px / 16px = 0.5625 or 56.25% */
+  html {
+    font-size: 56.25%;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+
+  .hero {
+    gap: 4.8rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+}
+
+/************************** 
+940px / 16px = 59
+BELOW 944PX (Tablets)
+***************************/
+
+@media (max-width: 59em) {
+  /* 8px / 16px = 0.5 or 50% */
+  html {
+    font-size: 50%;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+  }
+
+  .heading-tertiary,
+  .hero-img-box {
+    text-align: center;
+  }
+
+  .hero-img {
+    width: 60%;
+  }
+
+  .heading-cta {
+    font-size: 2.4rem;
+  }
+  .logos {
+    justify-content: space-evenly;
+  }
+
+  .cta {
+    /* 3/5 = 60%, 2/5 = 40% */
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+
+  .btn--form {
+    margin-top: 1.2rem;
+  }
+
+  /* Show the button */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    /* To center the container in the viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* Hide navigation,  */
+    /* display:none doesn't allow animation */
+    /* display: none; */
+
+    /* How to hide the element */
+    /* 1.) Hide it visually */
+    opacity: 0;
+
+    /* 2.) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3.) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  /* It will not apply if nav-open is not declared */
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+}
+
+/************************** 
+700px / 16px = 44
+BELOW 704PX (Smaller Tablets)
+***************************/
+@media (max-width: 44em) {
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 4rem;
+  }
+
+  .heading-secondary,
+  .line-height-md {
+    line-height: 4rem;
+    margin-bottom: 4.8rem;
+  }
+
+  .hero-text-box-1 {
+    grid-row: 2;
+  }
+
+  .hero-img-2,
+  .hero-img-3 {
+    width: 60%;
+  }
+
+  .hero-text-box-2 {
+    margin-bottom: 4rem;
+  }
+
+  .step-img-box {
+    padding: 4rem;
+  }
+  .step-img-box::before {
+    width: 75%;
+    padding-bottom: 55%;
+  }
+
+  .step-img-box::after {
+    width: 65%;
+    padding-bottom: 45%;
+  }
+
+  .grid--12-cols {
+    grid-template-rows: 1fr;
+  }
+
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .logo-col,
+  .address-col {
+    grid-column: span 3;
+  }
+
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+
+  .book-1,
+  .book-2,
+  .book-3 {
+    grid-row: 1;
+    grid-column: span 4;
+  }
+
+  .book-4 {
+    grid-row: 2;
+    grid-column: 3 / 7;
+  }
+
+  .book-5 {
+    grid-row: 2;
+    grid-column: 7 / 11;
+  }
+}
+
+/************************** 
+550px / 16px = 34
+BELOW 544PX (Smartphones)
+***************************/
+
+@media (max-width: 34em) {
+  .header {
+    padding: 0 3.2rem 0;
+  }
+
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  .grid--2-cols {
+    grid-template-rows: 1fr 2fr 1fr 2fr;
+  }
+
+  .grid--12-cols {
+    grid-template-columns: repeat(10, 1fr);
+    row-gap: 3.2rem;
+  }
+
+  .section-how,
+  .section-books {
+    padding: 6.4rem 0;
+  }
+
+  .section-gallery {
+    padding: 6.4rem 2rem;
+    gap: 1.2rem;
+  }
+
+  .gallery {
+    gap: 1.2rem;
+  }
+
+  .book-1 {
+    grid-row: 1;
+    grid-column: 2 / 6;
+  }
+
+  .book-2 {
+    grid-row: 1;
+    grid-column: 6 / 10;
+  }
+
+  .book-3 {
+    grid-row: 2;
+    grid-column: 4 / 8;
+  }
+
+  .book-4 {
+    grid-row: 3;
+    grid-column: 2 / 6;
+  }
+
+  .book-5 {
+    grid-row: 3;
+    grid-column: 6 / 10;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    padding: 0 3.2rem;
+  }
+
+  .section-hero {
+    padding: 2.4rem 0 6.4rem 0;
+  }
+
+  .heading-primary {
+    font-size: 3.2rem;
+  }
+
+  .step-img-box {
+    /* Move the images close to the description */
+    transform: translateY(24px);
+  }
+
+  .heading-secondary {
+    font-size: 3.2rem;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-text-box {
+    padding: 3.2rem;
+  }
+
+  .cta-img-box {
+    height: 32rem;
+    grid-row: 1;
+  }
+}
+
+/*
+ 
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 /
+52 / 62 / 74 / 76 / 86 / 98 
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+ */

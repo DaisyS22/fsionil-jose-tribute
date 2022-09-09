@@ -1,0 +1,581 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Satoshi", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d0ebff;
+  /* to be sticky */
+  height: 9.6rem;
+  padding: 0 4.8rem 0 5.7rem;
+  position: relative;
+}
+
+.logo {
+  height: 6.4rem;
+}
+
+.hero {
+  /* 130rem is used not 120rem because it makes the main
+  hero visually good */
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  align-items: center;
+  /* background-color: aqua; */
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.1;
+  margin-bottom: 4.8rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.container {
+  /* STANDARD 1140 px or 1200px */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+/* ******************** */
+/* NAVIGATION */
+/* ******************** */
+.main-nav-list {
+  font-family: "Lora";
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  /* always set links to inline-block */
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #114678;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #114678;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #0a0434;
+}
+
+/* MOBILE */
+.btn-mobile-nav {
+  border: none;
+  background-color: none;
+  cursor: pointer;
+
+  /* Set display as default to none */
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+/* Hides the close icon */
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/* STICKY NAVIGATION */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #fff;
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+
+/* ******************** */
+/* HERO SECTION */
+/* ******************** */
+.section-hero {
+  background-color: #d0ebff;
+  padding: 4.8rem 0 9.6rem 0;
+}
+
+/* ******************** */
+/* FEATURED SECTION (AWARDS) */
+.section-featured {
+  /* half of the original padding only because it is a small heading */
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.heading-featured-in {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logos img {
+  height: 9.4rem;
+  /* For text */
+  /* filter: brightness(0); */
+  /* opacity: 50%; */
+}
+
+/* ******************** */
+/* HOW IT WORKS SECTION */
+/* ******************** */
+.section-how {
+  padding: 9.6rem 0;
+}
+
+.step-img-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* BEFORE and AFTER pseudo elements cannot be add to image itself,
+because in the html we cannot add child elements */
+.step-img-box::before,
+.step-img-box::after {
+  content: "";
+  /* Set display to BLOCK element to make a shape */
+  display: block;
+  position: relative;
+  /* 100% of parent's width */
+  padding-bottom: 75%;
+  background-color: #d0ebff;
+  /* border-radius: 50%; */
+  position: absolute;
+  /* This will position the element to center */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.step-img-box::before {
+  width: 100%;
+  /* 100% of parent's width */
+  padding-bottom: 65%;
+  background-color: #d0ebff;
+  /* border-radius: 50%; */
+  /* This will position the element at the back */
+  z-index: -2;
+}
+
+.step-img-box::after {
+  width: 90%;
+  padding-bottom: 55%;
+  background-color: #d1e0ee;
+  z-index: -1;
+}
+
+.hero-img-2 {
+  width: 80%;
+}
+
+.description-2 {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+.hero-img-3 {
+  width: 80%;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #114678;
+  text-transform: uppercase;
+  margin-bottom: 3.2rem;
+}
+
+/* ********************** */
+/* BOOK SECTION  */
+/* ********************** */
+
+.section-books {
+  padding: 9.6rem 0;
+}
+
+.book {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.1);
+  border-radius: 11px;
+  overflow: hidden;
+  transition: all 0.4s;
+
+  /* whatever overflows the container is hidden. 
+  Example is the square radius of image */
+
+  /* set to relative in order to stop images from overlapping 
+  when translated */
+  position: relative;
+}
+
+/* to move the  vertically  */
+.book:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+}
+
+.book-1 {
+  grid-column: 1 / 4;
+  grid-row: 1 / 4;
+}
+
+.book-2 {
+  grid-column: 5 / 8;
+  grid-row: 1 / 4;
+}
+
+.book-3 {
+  grid-column: 9 / 12;
+  grid-row: 1 / 4;
+}
+
+.book-4 {
+  grid-column: 3 / 6;
+  grid-row: 2 / 5;
+}
+
+.book-5 {
+  grid-column: 7 / 10;
+  grid-row: 2 / 5;
+}
+
+/* .book-content {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+} */
+
+/* .book-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+} */
+
+/* .book-attributes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+} */
+
+.book-attribute {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+/* ICONS are treated like text*/
+.book-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #114678;
+}
+
+.book-img {
+  /* height: 100%; */
+  width: 100%;
+  /* border-radius: 11px; */
+  /* filter: brightness(95%); */
+}
+
+.all-books {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.section-gallery {
+  padding: 9.6rem 3.2rem;
+  background-color: #d0ebff;
+  margin-bottom: 9.2rem;
+  /* grid-template-columns: 50fr 50fr; */
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+
+  /* padding: 1.6rem; */
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  /* height: 100%; */
+  transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+/* *******************
+CTA SECTION
+****************** */
+
+.section-cta {
+  padding: 4.8rem 0 12.8rem 0;
+}
+
+.cta {
+  display: grid;
+  /* 2/3 = 66.6%, 1/3 = 33.3% */
+  grid-template-columns: 2fr 1fr;
+  /* background-color: #114678; */
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+
+  background-image: linear-gradient(to right bottom, #4dc9e6, #210cae);
+  overflow: hidden;
+}
+
+.cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color: #0a0434;
+}
+
+.cta .heading-secondary {
+  /* This will inherit color to cta-text-box */
+  color: inherit;
+  margin-bottom: 3.2rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+.cta-img-box {
+  /* the double dot means to move up one folder */
+  /* put the image on top of the linear background 
+  and adjust the opacity of the image */
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(65, 107, 147, 0.35),
+      rgba(17, 70, 120, 0.35)
+    ),
+    url("../img/cta.jpg");
+
+  /* covers the full image into the div */
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  /* use block to put the lable and input in own line */
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+
+  /* This will inherit the font family */
+  font-family: inherit;
+  /* color will be inherit to from cta-text-box */
+  color: inherit;
+  /* remove the default border  */
+  border: none;
+  background-color: #e9e7f7;
+  border-radius: 9px;
+
+  /* box-shadow: X Y blur color */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* psedo elements are elements that be selected or styled 
+which does not exist on the page. */
+
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+.btn--form {
+  background-color: #0a0434;
+  color: #e9e7f7;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  /* padding: 1.6rem 3.2rem; */
+  border-radius: 9px;
+
+  /* only for btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  transition: all 0.3s;
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(233, 231, 247, 0.5);
+}
+
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  /* set to block to make vertical spacing from link */
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+
+  /* pushes the content to the bottom */
+  margin-top: auto;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  /* flex to apply the gap property */
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
+}

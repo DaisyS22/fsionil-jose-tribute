@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- For search engines -->
+    <meta
+      name="description"
+      content="Filcols is a website for the national artist F. Sionil Jose"
+    />
+    <!-- This is used for responsive web design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- favicon or website icon -->
+    <link rel="icon" href="img/favicon.png" />
+
+    <!-- favicon for iOS -->
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+
+    <!-- favicon for android -->
+    <link rel="manifest" href="manifest.webmanifest" />
+
+    <!-- Paste the font before the css stylesheet -->
+    <link
+      href="https://api.fontshare.com/css?f[]=satoshi@300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Lora:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/general.css" rel="stylesheet" />
+    <link href="css/queries.css" rel="stylesheet" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script defer src="js/script.js"></script>
+
+    <title>F. Sionil Jose &mdash; The national artist</title>
+  </head>
+  <body>
+    <!-- Use HEADER after creating the SECTION -->
+    <header class="header">
+      <a href="#">
+        <img class="logo" alt="FILCOLS logo" src="img/FILCOLS logo.png" />
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#awards">Awards</a></li>
+          <li><a class="main-nav-link" href="#books">Books</a></li>
+          <li><a class="main-nav-link" href="#gallery">Gallery</a></li>
+          <li><a class="main-nav-link nav-cta" href="#cta">Subscribe</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <!-- MAIN element means it contains the main area of page -->
+    <main>
+      <section class="section-hero">
+        <!-- this class "hero" will be the css container  -->
+        <div class="hero">
+          <div class="hero-text-box">
+            <h1 class="heading-primary">Francisco Sionil José</h1>
+            <h3 class="heading-primary-additional">
+              National Artist of the Philippines <br />
+              December 3, 1924 - January 6, 2022
+            </h3>
+            <p class="hero-description">
+              Francisco Sionil José was a Filipino writer who was one of the
+              most widely read in the English language. A National Artist of the
+              Philippines for Literature, which was bestowed upon him in 2001,
+            </p>
+          </div>
+
+          <div class="hero-img-box">
+            <!-- To support the the compressed image in all browser -->
+            <picture>
+              <source srcset="img/hero-img.webp" type="image/webp" />
+              <source srcset="img/hero-img-min.png" type="image/png" />
+
+              <img
+                class="hero-img"
+                alt="f. sionil jose"
+                src="img/hero-img-min.png"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-featured" id="awards">
+        <div class="container">
+          <h2 class="heading-featured-in">Achievement and Awards</h2>
+          <div class="logos">
+            <img
+              src="img/logos/magsaysay-award-medal.png"
+              alt="magsaysay award logo"
+            />
+            <img
+              src="img/logos/cultural-center-ph.png"
+              alt="cultural center ph"
+            />
+            <img src="img/logos/palanca-awards.png" alt="palanca awards" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-how">
+        <div class="container">
+          <h2 class="heading-secondary">
+            Novelist Who Saw Heroism in Ordinary Filipino's
+          </h2>
+        </div>
+
+        <div class="container grid grid--2-cols grid--center-v">
+          <!-- STEP 01 -->
+          <div class="hero-text-box-1">
+            <h3 class="heading-tertiary">
+              Mr. Jose’s writing, rich in themes drawn from his rural upbringing
+            </h3>
+
+            <p class="description-2">
+              Sionil Jose is one of the most celebrated authors in the
+              Philippines. He is best known for his nov els and short stories
+              that depict class struggles in Filipino society. Among his most
+              notable works is The Rosales Saga, a five-novel series that paints
+              a picture of 100 years of Philippine history. After World War II,
+              he dropped out of the University of Santo Tomas to pursue his
+              writing career. He started as a staff member in 1947 at the
+              publication Commonweal, then moved to the U.S. Embassy in Manila
+              to work as assistant editor of the U.S. Information Agency in
+              1948. A year later, he became the associate editor of the Manila
+              Times Sunday Magazine where he worked until 1957.
+            </p>
+          </div>
+
+          <div class="step-img-box">
+            <img
+              src="img/hero-img-2.jpg"
+              class="hero-img-2"
+              alt="f. sionil jose"
+            />
+          </div>
+
+          <!-- STEP 02 -->
+          <div class="step-img-box">
+            <img
+              src="img/hero-img-3.jpg"
+              class="hero-img-3"
+              alt="f. sionil jose"
+            />
+          </div>
+          <div class="hero-text-box">
+            <h3 class="heading-tertiary">
+              His widely translated works delved into the Philippines' painful
+              colonial past and social injustices
+            </h3>
+
+            <p class="description-2">
+              Sionil José founded the Philippine Center of PEN International in
+              1957. In 1965, Sionil José and his wife, Teresita, founded the
+              Solidaridad Bookshop and Publishing House in Ermita, Manila. In
+              1967, he established Solidarity, a journal that enabled writers,
+              artists, politicians, scholars, and political and social activists
+              from Asia and the Pacific region to share their works before a
+              wider audience. In 1968, he founded Solidaridad Galleries, which
+              provided young Filipino artists with opportunities to showcase
+              their works. José received Carlos Palanca Memorial Awards for “The
+              God Stealer” (short fiction, 1959), “Waywaya” (short fiction,
+              1979), “Arbol de Fuego” (short fiction, 1980), “Tree” (novel,
+              1978), and “A Scenario for Philippine Resistance,” (essay,1979).
+              He also received the Ramon Magsaysay Award for Journalism,
+              Literature, and Creative Communication Arts in 1980 and the
+              Cultural Center of the Philippines (CCP) Centennial Honors for the
+              Arts in 1999.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-books" id="books">
+        <div class="center-text">
+          <span class="subheading">BOOKS</span>
+          <h2 class="heading-secondary">
+            Writer of award winning novel series
+          </h2>
+        </div>
+
+        <div class="container grid grid--12-cols margin-bottom-md">
+          <div class="book book-1">
+            <img src="img/books/po-on.png" alt="po-on" class="book-img" />
+
+            <!-- This wil be used as container for content of books -->
+            <!-- <div class="book-content">
+              <p class="book-title">PO-ON</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <ion-icon
+                    class="book-icon"
+                    name="calendar-outline"
+                  ></ion-icon>
+                  <span><strong>1984, 1998 </strong></span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>Historical Fiction, War, Romance</strong></span>
+                </li>
+              </ul>
+            </div> -->
+          </div>
+
+          <div class="book book-2">
+            <img
+              src="img/books/the-pretenders.png"
+              alt="the pretenders"
+              class="book-img"
+            />
+
+            <!-- This wil be used as container for content of books -->
+            <!-- <div class="book-content">
+              <p class="book-title">The Pretenders</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <ion-icon
+                    class="book-icon"
+                    name="calendar-outline"
+                  ></ion-icon>
+                  <span><strong>1962</strong></span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>Historical Fiction</strong></span>
+                </li>
+              </ul>
+            </div> -->
+          </div>
+
+          <div class="book book-3">
+            <img
+              src="img/books/my-brother-my-Executioner.png"
+              alt="my brother my executioner"
+              class="book-img"
+            />
+
+            <!-- This wil be used as container for content of books -->
+            <!-- <div class="book-content">
+              <p class="book-title">The Pretenders</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <ion-icon
+                    class="book-icon"
+                    name="calendar-outline"
+                  ></ion-icon>
+                  <span><strong>1962</strong></span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>Historical Fiction</strong></span>
+                </li>
+              </ul>
+            </div> -->
+          </div>
+          <div class="book book-4">
+            <img src="img/books/mass.png" alt="mass" class="book-img" />
+
+            <!-- This wil be used as container for content of books -->
+            <!-- <div class="book-content">
+              <p class="book-title">The Pretenders</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <ion-icon
+                    class="book-icon"
+                    name="calendar-outline"
+                  ></ion-icon>
+                  <span><strong>1962</strong></span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>Historical Fiction</strong></span>
+                </li>
+              </ul>
+            </div> -->
+          </div>
+
+          <div class="book book-5">
+            <img src="img/books/tree.png" alt="tree" class="book-img" />
+
+            <!-- This wil be used as container for content of books -->
+            <!-- <div class="book-content"> -->
+            <!-- <p class="book-title">The Pretenders</p> -->
+            <!-- <ul class="book-attributes">
+                <li class="book-attribute">
+                  <ion-icon
+                    class="book-icon"
+                    name="calendar-outline"
+                  ></ion-icon>
+                  <span><strong>1962</strong></span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>Historical Fiction</strong></span>
+                </li>
+              </ul> -->
+            <!-- </div> -->
+          </div>
+        </div>
+
+        <div class="container all-books">
+          <a href="#" class="link">See all books &rarr;</a>
+        </div>
+      </section>
+
+      <section class="section-gallery" id="gallery">
+        <div class="center-text">
+          <span class="subheading">GALLERY</span>
+          <h2 class="heading-secondary">Life full of honor and respect</h2>
+        </div>
+
+        <div class="gallery">
+          <figure class="gallery-item">
+            <img src="img/gallery/gallery-1.jpeg" alt="#" />
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="img/gallery/gallery-2.jpg" alt="#" />
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="img/gallery/gallery-3.jpg" alt="" />
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="img/gallery/gallery-4.jpg" alt="" />
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="img/gallery/gallery-5.jpg" alt="" />
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="img/gallery/gallery-6.jpg" alt="" />
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="img/gallery/gallery-7.jpg" alt="" />
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="img/gallery/gallery-8.jpg" alt="" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section-cta" id="cta">
+        <div class="container">
+          <div class="cta">
+            <div class="cta-text-box">
+              <h2 class="heading-secondary heading-cta">
+                Email us now to be updated
+              </h2>
+              <p class="cta-text">
+                You wil be updated to the tons of books created by the national
+                artist f sionil jose.
+              </p>
+
+              <!-- the data will be send using action -->
+              <form class="cta-form" name="sign-up" netlify>
+                <div>
+                  <label for="full-name">Full Name</label>
+                  <input
+                    id="full-name"
+                    type="text"
+                    placeholder="Rogelio Umbay"
+                    name="full-name"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="email">Email Address</label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="yourname@gmail.com"
+                    name="email"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="select-where">Where did you hear from us?</label>
+                  <select id="select-where" name="select-where" required>
+                    <option value="">Choose from the options:</option>
+                    <option value="friends">Friends and Family</option>
+                    <option value="youtube">youtube video</option>
+                    <option value="facebook">facebook</option>
+                  </select>
+                </div>
+
+                <button class="btn btn--form">Sign up now</button>
+
+                <!-- <input type="checkbox" />
+                <input type="number" /> -->
+              </form>
+            </div>
+
+            <!-- role = "img" makes the div ac as in image
+          then use aria-label as an alt -->
+            <div
+              class="cta-img-box"
+              role="img"
+              aria-label="stacked books"
+            ></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer is outside the main element -->
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img class="logo" alt="FILCOLS logo" src="img/FILCOLS logo.png" />
+          </a>
+
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            Copyright &copy; 2022 by FILCOLS Inc. All rights reserved.
+          </p>
+        </div>
+
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+          <address class="contacts">
+            <p class="address">
+              Address: Singapre 3 b6-Baseco Port area, Manila
+            </p>
+            <p>Email: rogelioumbay.ru@gmaill.com</p>
+            <p>
+              <a class="footer-link" href="tel:+639401650506"> +639401650506</a
+              ><br />
+              <a class="footer-link" href="mailto:rogelioumbay.ru@gmail.com">
+                rogelioumbay.ru@gmail.com
+              </a>
+            </p>
+          </address>
+        </div>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Create Account</a></li>
+            <li><a class="footer-link" href="#">Sign in</a></li>
+            <li><a class="footer-link" href="#">iOS app</a></li>
+            <li><a class="footer-link" href="#">Android app</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">About FILCOLS</a></li>
+            <li><a class="footer-link" href="#">Books store</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Help center</a></li>
+            <li><a class="footer-link" href="#">Privacy and terms</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
